@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.os.Message;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -35,25 +36,24 @@ public class MainActivity extends AppCompatActivity {
         fragments[1]=getFragmentManager().findFragmentById(R.id.two);
         getFragmentManager().beginTransaction().show(fragments[0]).hide(fragments[1]).commit();
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open, R.string.close);
+        actionBarDrawerToggle.syncState();
         final NavigationView navigationView=(NavigationView)findViewById(R.id.navigation_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem item) {
-                switch(item.getItemId()) {
-                    case R.id.classroom:
-                        getFragmentManager().beginTransaction().show(fragments[0]).hide(fragments[1]).commit();
-                        drawerLayout.closeDrawers();
-                        toolbar.setTitle("教室");
-                        break;
-                    case R.id.car:
-                        toolbar.setTitle("停车位");
-                        getFragmentManager().beginTransaction().show(fragments[1]).hide(fragments[0]).commit();
-                        drawerLayout.closeDrawers();
-                        break;
-                }
-                item.setChecked(true);
-                return false;
+        navigationView.setNavigationItemSelectedListener(item -> {
+            switch(item.getItemId()) {
+                case R.id.classroom:
+                    getFragmentManager().beginTransaction().show(fragments[0]).hide(fragments[1]).commit();
+                    drawerLayout.closeDrawers();
+                    toolbar.setTitle("教室");
+                    break;
+                case R.id.car:
+                    toolbar.setTitle("停车位");
+                    getFragmentManager().beginTransaction().show(fragments[1]).hide(fragments[0]).commit();
+                    drawerLayout.closeDrawers();
+                    break;
             }
+            item.setChecked(true);
+            return false;
         });
     }
 }
