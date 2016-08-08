@@ -1,6 +1,7 @@
 package com.example.qinc0.college;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Message;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -50,6 +51,18 @@ public class MainActivity extends AppCompatActivity {
                     toolbar.setTitle("停车位");
                     getFragmentManager().beginTransaction().show(fragments[1]).hide(fragments[0]).commit();
                     drawerLayout.closeDrawers();
+                    break;
+                case R.id.menu_login:
+                    drawerLayout.closeDrawers();
+                    Log.w("qc1","one");
+                    Intent intent=new Intent(MainActivity.this,login.class);
+                    startActivity(intent);
+                    break;
+                case R.id.classTable:
+                    drawerLayout.closeDrawers();
+                    Log.w("qc1","one");
+                    Intent intent1=new Intent(MainActivity.this,ClassTable.class);
+                    startActivity(intent1);
                     break;
             }
             item.setChecked(true);
