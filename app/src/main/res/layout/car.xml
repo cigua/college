@@ -8,7 +8,7 @@
         android:layout_width="100dip"
         android:layout_height="100dip"
         android:layout_marginLeft="25dip"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/kong"/>
     <TextView
         android:id="@+id/seat1_"
         android:layout_width="wrap_content"
@@ -23,7 +23,7 @@
         android:layout_width="100dip"
         android:layout_height="100dip"
         android:layout_toRightOf="@id/seat1"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/you"/>
     <TextView
         android:id="@+id/seat2_"
         android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
         android:layout_width="100dip"
         android:layout_height="100dip"
         android:layout_toRightOf="@id/seat2"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/kong"/>
     <TextView
         android:id="@+id/seat3_"
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         android:layout_height="100dip"
         android:layout_alignLeft="@id/seat1"
         android:layout_below="@id/seat1"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/you"/>
     <TextView
         android:id="@+id/seat4_"
         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
         android:layout_height="100dip"
         android:layout_toRightOf="@id/seat4"
         android:layout_below="@id/seat2"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/kong"/>
     <TextView
         android:id="@+id/seat5_"
         android:layout_width="wrap_content"
@@ -86,7 +86,7 @@
         android:layout_height="100dip"
         android:layout_toRightOf="@id/seat5"
         android:layout_below="@id/seat3"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/kong"/>
     <TextView
         android:id="@+id/seat6_"
         android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
         android:layout_height="100dip"
         android:layout_alignLeft="@id/seat4"
         android:layout_below="@id/seat4"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/kong"/>
     <TextView
         android:id="@+id/seat7_"
         android:layout_width="wrap_content"
@@ -118,7 +118,7 @@
         android:layout_height="100dip"
         android:layout_toRightOf="@id/seat7"
         android:layout_below="@id/seat5"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/kong"/>
     <TextView
         android:id="@+id/seat8_"
         android:layout_width="wrap_content"
@@ -134,7 +134,7 @@
         android:layout_height="100dip"
         android:layout_toRightOf="@id/seat8"
         android:layout_below="@id/seat6"
-        android:src="@drawable/seat"/>
+        android:src="@drawable/kong"/>
     <TextView
         android:id="@+id/seat9_"
         android:layout_width="wrap_content"
